@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../Downloads/browser-extensions-manager-ui-main/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/fontStyle.css">
+  <link rel="stylesheet" href="styles/style.css">
+ <script src="scripts/theme.js"></script>
+ <script src="/scripts/index.js"></script>
+ <script type="module" src="/scripts/dataRender.js"></script>
+
+
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+</head>
+
+<body>
+ <div class="mainScroll">
+
+ <header>
+  <div class="head_of_page" >
+      <img class="extension_logo" src="images/logo.svg" alt="Extensions">
+
+   <button class="page_style_button" id="white-style" onclick="toggleTheme()">
+       <img class = "moon-icon" src="images/icon-moon.svg" alt="Кнопка выбора темной темы">
+       <img class = "sun-icon" src="images/icon-sun.svg" alt="Кнопка выбора темной темы">
+   </button>
+  </div>
+ </header>
+
+
+  <main>
+   <div class="filterBar">
+     <H1 class="paintedText"> Extensions List </H1>
+     <div class="filter-buttons">
+       <button class="filter-button paintedText" onclick="showAll()"> ALL </button>
+       <button class="filter-button paintedText" onclick="showActive()"> Active </button>
+       <button class="filter-button paintedText" onclick="showInActive()"> Inactive </button>
+     </div>
+   </div>
+  <section class="extensionsList" id="products-container">
+  <article class="articleCard" id="devlens">
+    <div class="main-info">
+        <img class="logo_of_extension " src="images/logo-devlens.svg" alt="">
+
+        <div>
+            <H3 class="paintedText"> DevLens</H3>
+            <p> Quickly inspect page layouts and visualize element boundaries.</p>
+        </div>
+    </div>
+    <div class = bottom_of_article>
+       <button   class="paintedText removeButton"> Remove </button>"> Remove </button>
+       <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+       </label>
+    </div>
+  </article>
+
+  <article class="articleCard">
+  StyleSpy
+  Instantly analyze and copy CSS from any webpage element.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  SpeedBoost
+  Optimizes browser resource usage to accelerate page loading.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  JSONWizard
+  Formats, validates, and prettifies JSON responses in-browser.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  TabMaster Pro
+  Organizes browser tabs into groups and sessions.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  ViewportBuddy
+  Simulates various screen resolutions directly within the browser.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  Markup Notes
+  Enables annotation and notes directly onto webpages for collaborative debugging.
+  Remove
+  </article>
+
+  <article class="articleCard">
+  GridGuides
+  Overlay customizable grids and alignment guides on any webpage.
+  Remove
+  </article>
+
+  Palette Picker
+  Instantly extracts color palettes from any webpage.
+  Remove
+
+  LinkChecker
+  Scans and highlights broken links on any page.
+  Remove
+
+  DOM Snapshot
+  Capture and export DOM structures quickly.
+  Remove
+
+  ConsolePlus
+  Enhanced developer console with advanced filtering and logging.
+  Remove
+ </section>
+ </main>
+ </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
