@@ -37,9 +37,7 @@ class StaticJSONRenderer {
             console.error('Нет данных для отображения');
             return;
         }
-        const cardsHTML = this.data.products.map(product => this.productCardTemplate(product)).join('');
-
-        this.container.innerHTML = cardsHTML;
+        this.container.innerHTML = this.data.products.map(product => this.productCardTemplate(product)).join('');
     }
 }
 
