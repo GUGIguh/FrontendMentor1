@@ -89,6 +89,9 @@ body{
     outline: 2px solid #CC261D;
     outline-offset: 2px;
 }
+.page_style_button:hover{
+    filter: brightness(0.9);
+}
 .filterBar{
     display: flex;
     justify-content: space-between;
@@ -99,32 +102,42 @@ body{
 }
 .filter-button{
     padding: 10px;
+    font-size: 14px;
     font-weight: 600;
     border: 1px solid var(--border-color);
     background-color: var(--bg-card);
     border-radius: 20px;
     cursor: pointer;
 }
+.filter-button.default{
+    background-color: var(--bg-card);
+}
+.filter-button.active{
+    background-color: #CC261D;
+}
 .filter-button:focus{
     outline: 2px solid #CC261D;
     outline-offset: 2px;
 }
+.filter-button:hover{
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+}
 .extensionsList{
+
     display: flex;
     flex-wrap: wrap;
-
-    gap:20px
+    gap:15px
 }
 .articleCard{
     display: flex;
     flex-wrap: wrap;
     background-color: var(--bg-card);
-    width: calc(33.3% - 20px);
+    width: calc(33.3% - 10px);
     min-height: 200px;
-    padding: calc(0.04 * (33.3% - 20px));
+    padding: calc(0.04 * (33.3% - 10px));
     box-sizing: border-box;
     border-radius: 20px;
-
     box-shadow: var(--shadow);
 }
 .logo_of_extension{
@@ -164,6 +177,9 @@ p{
     border-radius: 20px;
     cursor: pointer;
     color: var(--text-primary);
+}
+.removeButton:hover{
+    filter: brightness(0.9);
 }
 .removeButton:focus{
     outline: 2px solid #CC261D;

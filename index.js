@@ -7,7 +7,14 @@ function toggleSwitched(checkBox){
         checkBox.className="true";
     }
 }
-function showActive() {
+function colorSwap(curButton){
+    const prevActive = document.querySelectorAll('.active');
+    prevActive.forEach(button => {
+        button.classList.replace("active","default");
+    })
+    curButton.classList.replace("default","active");
+}
+function showActive(btn) {
     const allCards = document.querySelectorAll(".articleCard");
     allCards.forEach(card => {
         if (card.querySelector(".false")){
@@ -18,12 +25,14 @@ function showActive() {
         }
 
     })
+    colorSwap(btn);
 }
-function showAll(){
+function showAll(btn){
     const allCards=document.querySelectorAll(".articleCard");
-    allCards.forEach(card =>{card.style.display="flex"})
+    allCards.forEach(card =>{card.style.display="flex"});
+    colorSwap(btn);
 }
-function showInActive(){
+function showInActive(btn){
     const allCards=document.querySelectorAll(".articleCard")
     allCards.forEach(card => {
 
@@ -34,4 +43,5 @@ function showInActive(){
             card.style.display="flex";
         }
     })
+    colorSwap(btn);
 }

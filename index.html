@@ -7,9 +7,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../../Downloads/browser-extensions-manager-ui-main/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/fontStyle.css">
   <link rel="stylesheet" href="styles/style.css">
- <script src="scripts/theme.js"></script>
- <script src="/scripts/index.js"></script>
- <script type="module" src="/scripts/dataRender.js"></script>
+ <script src="theme.js"></script>
+ <script src="index.js"></script>
+ <script type="module" src="dataRender.js"></script>
+
 
 
   <title>Frontend Mentor | Browser extensions manager UI</title>
@@ -35,9 +36,9 @@
    <div class="filterBar">
      <H1 class="paintedText"> Extensions List </H1>
      <div class="filter-buttons">
-       <button class="filter-button paintedText" onclick="showAll()"> ALL </button>
-       <button class="filter-button paintedText" onclick="showActive()"> Active </button>
-       <button class="filter-button paintedText" onclick="showInActive()"> Inactive </button>
+       <button id="allBtn"  class="filter-button default paintedText" onclick="showAll(this)"> ALL </button>
+       <button id="activeBtn" class="filter-button default paintedText" onclick="showActive(this)"> Active </button>
+       <button id="inactiveBtn" class="filter-button default paintedText" onclick="showInActive(this)"> Inactive </button>
      </div>
    </div>
   <section class="extensionsList" id="products-container">
